@@ -4,7 +4,9 @@ from langchain.prompts import ChatPromptTemplate
 import telebot
 from langchain_community.document_loaders import PyPDFLoader
 
-#Puxando dados do PDF para informar sobre mim 
+# CRIADO POR ALEXANDRE SAMPAIO
+
+# Puxando dados do PDF para informar sobre mim 
 caminho = 'Profile.pdf'
 loader = PyPDFLoader(caminho)
 lista_documentos = loader.load()
@@ -13,11 +15,11 @@ documento = ''
 for doc in lista_documentos:
     documento = documento + doc.page_content
 
-api_key = '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'
+api_key = 'API-DO-LANGCHAIN'
 os.environ['GROQ_API_KEY'] = api_key
 chat = ChatGroq(model='llama-3.3-70b-versatile')
 
-KEY_BOT = '8078953304:AAFP4HYhitHkrB9iD8snKd5hDZXi-cxEAdQ'
+KEY_BOT = 'API-DO-BOT-TELEGRAM'
 bot = telebot.TeleBot(KEY_BOT)
 
 #Função para o comando /start
