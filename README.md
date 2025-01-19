@@ -6,3 +6,4 @@ NoboIa é uma assistente amigável desenvolvida por Alexandre Sampaio com o obje
 # Python
 # LangChain
 # LLama
+# Telebot
